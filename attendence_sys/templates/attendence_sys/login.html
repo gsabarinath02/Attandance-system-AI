@@ -73,6 +73,32 @@
 			padding: 10px;
 			margin-top: 10px;
 		}
+
+		/* Box Styles */
+.box {
+    width: 600px;
+	/* height: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	align-self: auto;
+}
+
+/* Close Button Style */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
 	</style>
 
 </head>
@@ -81,8 +107,6 @@
 		<div class="d-flex justify-content-center h-100">
 			<div class="user_card">
 				<div class="d-flex justify-content-center">
-
-
 					<h3 id="form-title">LOGIN</h3>
 				</div>
 				<div class="d-flex justify-content-center form_container">
@@ -109,26 +133,68 @@
 				   			</div>
 					</form>
 
-				</div>
+				</div>	
 
-				{% for message in messages %}
-					<p id="messages">{{message}}</p>
-				{% endfor %}			
-		
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						user: sabari <a href="" class="ml-2"></a>
-					</div>
-				</div>
-
-								<div class="mt-4">
-									<div class="d-flex justify-content-center links">
-										pass: sabari<a href="" class="ml-2"></a>
-									</div>
-								</div>
 			</div>
+										<div class="box">
+											<span class="close">&times;</span>
+											<h3>About</h3>
+											<p>
+												<br>
+												I hope this message finds you well. I would like to introduce myself as G Sabarinath, I am currently working on
+												a comprehensive AI-based exam proctoring system, and I
+												would like to share with you a module I have been developing.
+												<br>
+												<br>
+												The module I have created is an AI Attendance System that utilizes face verification to mark the attendance of
+												students. This system grants faculty members the permission to take attendance, add students, and modify student
+												details. Additionally, faculty members can search for a student's attendance using a multiparameter search
+												feature, specifying the student ID, date of attendance, and period of attendance.
+												<br>
+												<br>
+												To access the system, faculty members are provided with credentials by the superuser, who has access to the
+												entire database. Only the superuser can update a student's attendance. For the development of this web
+												application, I utilized the Django web framework. To implement the face recognition functionality, I
+												incorporated OpenCV and the face_recognition API. The Face Recognizer component is capable of detecting multiple
+												faces simultaneously and recording their attendance in the database.
+												<br>
+												<br>
+												To access the system, please use the following login details:
+												<br>
+												<br>
+												<b>Username: sabari</b>
+												<br>
+												<b>Password: sabari</b>
+												<br>
+												<br>
+												<i style="color:red">Please note that due to limited space availability on the PythonAnywhere platform,
+													only essential packages have been installed. If you encounter any issues or find that certain
+													functionalities are not working as expected, please don't hesitate to contact me.</i>
+												<br>
+												<br>
+												Thank you for your attention to this matter. If you require any further information or assistance, please feel
+												free to reach out.
+											</p>
+										</div>
 		</div>
-	</div>
+		</div>
+
+
+			<script>
+				// Get the box element
+				var box = document.querySelector(".box");
+
+				// Get the close button element
+				var closeBtn = document.querySelector(".close");
+
+				// When the user clicks the close button, hide the box
+				closeBtn.onclick = function () {
+					box.style.display = "none";
+				}
+
+			</script>
+			
+
 </body>
 
 </html>
